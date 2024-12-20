@@ -15,7 +15,7 @@ public class HomePage {
 
     public HomePage()
     {
-        loginProperties = CommonUtility.readPropertyFile(FilePaths.LOGIN_PAGE_LOCATORS);
+        loginProperties = CommonUtility.readPropertyFile(FilePaths.REQUESTER_PAGE_LOCATORS);
     }
 
     public static HomePage getInstance() {
@@ -26,6 +26,7 @@ public class HomePage {
 
     public void titleOfThePage(){
         logger.info("Fetching the title of the Page");
+
     }
     public void userLogo(){
         logger.info("Locating the user logo");

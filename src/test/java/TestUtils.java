@@ -23,7 +23,7 @@ public class TestUtils {
     }
 
     public String getValueFromLoginDataJson(String regex) throws FileNotFoundException {
-        return JSONUtility.getValueFromJSON(FilePaths.LOGIN_PAGE_DATA, "$." + regex).toString();
+        return JSONUtility.getValueFromJSON(FilePaths.REQUESTER_PAGE_DATA, "$." + regex).toString();
     }
     public void initiateTheLogin_Test(String userName, String pwd) {
         loginPageInstance.addCredentials(userName,pwd);

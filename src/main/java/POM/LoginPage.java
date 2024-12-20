@@ -13,7 +13,7 @@ public class LoginPage extends SeleniumUtilities {
 
     public LoginPage()
     {
-        loginProperties = CommonUtility.readPropertyFile(FilePaths.LOGIN_PAGE_LOCATORS);
+        loginProperties = CommonUtility.readPropertyFile(FilePaths.REQUESTER_PAGE_LOCATORS);
     }
 
     public static LoginPage getInstance() {
