@@ -1,0 +1,21 @@
+{
+  "applicationURL": "http://localhost:5173/login",
+  "validCred_Admin": [
+    {
+      "validUserName":"ansh.admin",
+      "validPwd": "password123"
+    }
+  ],
+  "validCRed_Internal": [
+    {
+      "validUserName":"ansh.admin",
+      "validPwd": "Athika@2024"
+    }
+  ],
+  "validCRed_External": [
+    {
+      "validUserName":"ansh.admin",
+      "validPwd": "Athika@2024"
+    }
+  ]
+}
