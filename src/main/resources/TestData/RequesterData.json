@@ -17,5 +17,14 @@
       "validUserName":"ansh.admin",
       "validPwd": "Athika@2024"
     }
+  ],
+  "newWorkRequestData": [
+    {
+      "lowPriority": "Low",
+      "highPriority": "High",
+      "mediumPriority": "Medium",
+      "requestedDeliveryDate": "11/11/2025",
+      "file": "C:\\Users\\fareena.s.wissen\\glass\\Glass_Application_Automation_Framework\\src\\main\\resources\\TestData\\SampleFile.pdf"
+    }
   ]
 }
