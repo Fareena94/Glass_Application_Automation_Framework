@@ -6,7 +6,11 @@ import com.glassPages.Utility.SeleniumUtilities;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import static com.glassPages.Utility.ExtentSparkReport.extentLogger;
 
@@ -60,10 +64,27 @@ public class CreateNewWorkReq extends SeleniumUtilities {
         logger.info("Added Description");
     }
 
-    public void uploadFile(String file){
+    public void uploadFile() throws AWTException {
         extentLogger.info("Uploading the file");
-        setElementText(requestorPageProperties.getProperty("uploadFiles"),file);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        clickOnElement(requestorPageProperties.getProperty("uploadFiles"));
+
+        Robot rb= new Robot();
+        StringSelection str= new StringSelection("C:\\Users\\fareena.s.wissen\\glass\\Glass_Application_Automation_Framework\\src\\main\\resources\\TestData\\SampleFile.pdf");
+        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(str,null);
+        rb.keyPress(KeyEvent.VK_CONTROL);
+        rb.keyPress(KeyEvent.VK_V);
+        rb.keyRelease(KeyEvent.VK_CONTROL);
+        rb.keyRelease(KeyEvent.VK_V);
+        rb.keyPress(KeyEvent.VK_ENTER);
+        rb.keyRelease(KeyEvent.VK_ENTER);
         extentLogger.info("Uploaded the file");
+    }
+    public void addField(){
+        clickOnElement(requestorPageProperties.getProperty("addFields"));
+    }
+    public void selectField(String field){
+    selectDropdownByVisibleText(requestorPageProperties.getProperty("selectField"),field);
     }
 
 
@@ -108,6 +129,5 @@ public class CreateNewWorkReq extends SeleniumUtilities {
         clickOnElement(requestorPageProperties.getProperty("submitBtn"));
         logger.info("Clicked on Submit Button");
     }
-
 
 }

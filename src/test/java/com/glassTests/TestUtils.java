@@ -47,7 +47,7 @@ public class TestUtils extends ExtentSparkReport{
     @AfterMethod(alwaysRun = true)
     public void generateTestReport(ITestResult result) {
         ExtentSparkReport.generateReport(result);
-        loginPageInstance.closeCurrentBrowser();
+   //     loginPageInstance.closeCurrentBrowser();
     }
 
      public String getValueFromLoginDataJson(String regex) throws FileNotFoundException {

@@ -1,13 +1,18 @@
 package com.glassTests.requester;
 
 import com.glassTests.TestUtils;
+
+import org.apache.commons.lang.RandomStringUtils;
+
 import net.bytebuddy.utility.RandomString;
 import org.apache.commons.lang.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import org.testng.annotations.Test;
 
+import java.awt.*;
 import java.io.FileNotFoundException;
 import java.time.Duration;
 import java.util.Random;
@@ -18,6 +23,20 @@ import static com.glassPages.Utility.SeleniumUtilities.driver;
 public class CreateNewWorkReqTest extends TestUtils {
 
     @Test
+
+    public void createWorkRequest() throws FileNotFoundException, AWTException {
+        launchGlassApplicationAsAdmin();
+        createNewWRInstance.clickOnCreateWorkRequestBtn();
+        createNewWRInstance.addTitleOfWR("WorkRequest_"+RandomStringUtils.randomAlphabetic(3));
+        createNewWRInstance.addPriorityToWR(getValueFromLoginDataJson("newWorkRequestData[0].lowPriority"));
+        createNewWRInstance.addDeliveryDate(getValueFromLoginDataJson("newWorkRequestData[0].requestedDeliveryDate"));
+        createNewWRInstance.addFileFormat(getValueFromLoginDataJson("newWorkRequestData[0].fileFormat"));
+        createNewWRInstance.addDescription(RandomStringUtils.randomAlphabetic(20));
+        createNewWRInstance.uploadFile();
+        createNewWRInstance.addField();
+        createNewWRInstance.selectField(getValueFromLoginDataJson("newWorkRequestData[0].addFields[0].lang_field"));
+        createNewWRInstance.clickOnSubmitBtn();
+
     public void createWorkRequest() throws FileNotFoundException, InterruptedException {
         launchGlassApplicationAsAdmin();
        createNewWRInstance.clickOnCreateWorkRequestBtn();
