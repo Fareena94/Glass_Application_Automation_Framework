@@ -23,8 +23,11 @@
       "lowPriority": "Low",
       "highPriority": "High",
       "mediumPriority": "Medium",
+      "fileFormat": "txt",
       "requestedDeliveryDate": "11/11/2025",
-      "file": "C:\\Users\\fareena.s.wissen\\glass\\Glass_Application_Automation_Framework\\src\\main\\resources\\TestData\\SampleFile.pdf"
+      "file": "C:\\Users\\fareena.s.wissen\\glass\\Glass_Application_Automation_Framework\\src\\main\\resources\\TestData\\SampleFile.pdf",
+      "information": "Project Code",
+      "enterInfo": "Project Code"
     }
   ]
 }
