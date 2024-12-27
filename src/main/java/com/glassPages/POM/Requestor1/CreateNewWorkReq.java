@@ -50,11 +50,15 @@ public class CreateNewWorkReq extends SeleniumUtilities {
         extentLogger.info("Adding Delivery date");
         setElementText(requestorPageProperties.getProperty("requestDeliveryDate"),date);
         logger.info("Added Delivery date");
-    }    public void addFileFormat(String format){
+    }
+
+    public void addFileFormat(String format){
         extentLogger.info("Adding File format");
         setElementText(requestorPageProperties.getProperty("workProductFormat"),format);
         logger.info("Added File format");
-    }    public void addDescription(String description){
+    }
+
+    public void addDescription(String description){
         extentLogger.info("Adding Description");
         setElementText(requestorPageProperties.getProperty("addDescription"),description);
         logger.info("Added Description");
@@ -83,13 +87,47 @@ public class CreateNewWorkReq extends SeleniumUtilities {
     selectDropdownByVisibleText(requestorPageProperties.getProperty("selectField"),field);
     }
 
-public void clickOnCancelBtn(){
-     clickOnElement(requestorPageProperties.getProperty("cancelBtn"));
-}
+
+    public void clickOnAddField(){
+        extentLogger.info("Adding Addition information");
+        clickOnElement(requestorPageProperties.getProperty("addFields"));
+        logger.info("Added Addition information");
+    }
+
+
+    public void selectInformation(String info){
+        extentLogger.info("Selecting the Information");
+        setElementText(requestorPageProperties.getProperty("selectField"),info);
+        extentLogger.info("Information is selected");
+    }
+
+
+    public void enterInformation(String inform){
+        extentLogger.info("Adding Information");
+        setElementText(requestorPageProperties.getProperty("enterDepartment"),inform);
+        logger.info("Added Information");
+    }
+
+
+
+    public void clickOnCancelBtn(){
+        extentLogger.info("Clicking on Cancel Button");
+        clickOnElement(requestorPageProperties.getProperty("cancelBtn"));
+        logger.info("Clicked on Cancel Button");
+    }
+
+
+
     public void clickOnSaveAsDraftBtn(){
-        clickOnElement(requestorPageProperties.getProperty("saveAsDraft"));
+        extentLogger.info("Clicking on Save As Button Button");
+        clickOnElement(requestorPageProperties.getProperty("saveAsDraftBtn"));
+        logger.info("Clicked on Save As Draft Button");
     }
+
     public void clickOnSubmitBtn(){
-        clickOnElement(requestorPageProperties.getProperty("saveBtn"));
+        extentLogger.info("Clicking on Submit Button");
+        clickOnElement(requestorPageProperties.getProperty("submitBtn"));
+        logger.info("Clicked on Submit Button");
     }
+
 }
