@@ -3,6 +3,7 @@ package com.glassTests;
 import com.glassPages.Constants.FilePaths;
 import com.glassPages.POM.LoginPage;
 import com.glassPages.POM.Requestor1.CreateNewWorkReq;
+import com.glassPages.POM.Requestor1.HomePage;
 import com.glassPages.Utility.CommonUtility;
 import com.glassPages.Utility.ExtentSparkReport;
 import com.glassPages.Utility.JSONUtility;
@@ -22,7 +23,7 @@ public class TestUtils extends ExtentSparkReport{
     public static CommonUtility commonUtility;
     public static LoginPage loginPageInstance;
 
-    public static HomePageTest homePageTestInstance;
+    public static HomePage homePageInstance;
     public static CreateNewWorkReq createNewWRInstance;
 
     @BeforeSuite(alwaysRun = true)
@@ -33,6 +34,7 @@ public class TestUtils extends ExtentSparkReport{
     @BeforeTest(alwaysRun = true)
     public void getInstances() {
        loginPageInstance = LoginPage.getInstance();
+       homePageInstance= HomePage.getInstance();
        createNewWRInstance = CreateNewWorkReq.getInstance();
 
     }
@@ -46,7 +48,7 @@ public class TestUtils extends ExtentSparkReport{
     @AfterMethod(alwaysRun = true)
     public void generateTestReport(ITestResult result) {
         ExtentSparkReport.generateReport(result);
-   //     loginPageInstance.closeCurrentBrowser();
+        loginPageInstance.closeCurrentBrowser();
     }
 
      public String getValueFromLoginDataJson(String regex) throws FileNotFoundException {

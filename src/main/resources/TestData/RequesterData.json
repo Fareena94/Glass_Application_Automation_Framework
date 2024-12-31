@@ -6,16 +6,16 @@
       "validPwd": "password123"
     }
   ],
-  "validCRed_Internal": [
+  "validCred_Internal": [
     {
-      "validUserName":"ansh.admin",
-      "validPwd": "Athika@2024"
+      "validUserName":"ansh.internal",
+      "validPwd": "password123"
     }
   ],
-  "validCRed_External": [
+  "validCred_External": [
     {
-      "validUserName":"ansh.admin",
-      "validPwd": "Athika@2024"
+      "validUserName":"ansh.external",
+      "validPwd": "password123"
     }
   ],
   "newWorkRequestData": [

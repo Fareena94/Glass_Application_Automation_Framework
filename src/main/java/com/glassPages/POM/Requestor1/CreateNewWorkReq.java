@@ -66,7 +66,7 @@ public class CreateNewWorkReq extends SeleniumUtilities {
         clickOnElement(requestorPageProperties.getProperty("uploadFiles"));
 
         Robot rb= new Robot();
-        StringSelection str= new StringSelection("C:\\Users\\fareena.s.wissen\\glass\\Glass_Application_Automation_Framework\\src\\main\\resources\\TestData\\SampleFile.pdf");
+        StringSelection str= new StringSelection("\"C:\\Users\\fareena.s.wissen\\Downloads\\SampleFile.pdf\"");
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(str,null);
         rb.keyPress(KeyEvent.VK_CONTROL);
         rb.keyPress(KeyEvent.VK_V);
