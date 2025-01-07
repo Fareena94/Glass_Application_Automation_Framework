@@ -1,0 +1,13 @@
+{
+  "data":
+    {
+      "username": "Demo1",
+    "email": "demo1@gmail.com",
+    "password": "Demo1@111",
+    "role": "ADMIN",
+    "firstName": "Demo1",
+    "lastName": "Test"
+    }
+
+
+}

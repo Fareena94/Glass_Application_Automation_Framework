@@ -1,0 +1,23 @@
+{
+  "register_data":
+  [
+    {
+      "username": "Demo4",
+      "email": "demo4@gmail.com",
+      "password": "Demo4@111",
+      "role": "ADMIN",
+      "firstName": "Demo4",
+      "lastName": "Tes4"
+    }],
+  "login_data": [{
+    "username": "ansh.admin",
+    "email": "password123"
+  }
+  ],
+  "endpoints": [
+    {
+      "login": "login",
+      "register": "register"
+    }
+  ]
+}

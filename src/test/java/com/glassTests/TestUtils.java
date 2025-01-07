@@ -6,7 +6,7 @@ import com.glassPages.POM.Requestor1.CreateNewWorkReq;
 import com.glassPages.Utility.CommonUtility;
 import com.glassPages.Utility.ExtentSparkReport;
 import com.glassPages.Utility.JSONUtility;
-import com.glassTests.requester.HomePageTest;
+import com.glassPages.Utility.PostgresDatabaseUtility;
 import lombok.SneakyThrows;
 import org.apache.commons.lang.RandomStringUtils;
 import org.apache.logging.log4j.LogManager;
@@ -22,13 +22,17 @@ public class TestUtils extends ExtentSparkReport{
     public Logger logger = LogManager.getLogger(TestUtils.class);
     public static CommonUtility commonUtility;
     public static LoginPage loginPageInstance;
+    PostgresDatabaseUtility postgresDatabaseUtilityInstance;
 
-    public static HomePageTest homePageTestInstance;
+//    public static HomePageTest homePageTestInstance;
     public static CreateNewWorkReq createNewWRInstance;
 
     @BeforeSuite(alwaysRun = true)
     public void extents() {
         ExtentSparkReport.initialise();
+        postgresDatabaseUtilityInstance = PostgresDatabaseUtility.getInstance();
+        postgresDatabaseUtilityInstance.setUpPostgresDBConnection();
+
     }
 
     @BeforeTest(alwaysRun = true)
