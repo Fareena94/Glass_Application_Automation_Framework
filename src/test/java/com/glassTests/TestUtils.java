@@ -32,7 +32,6 @@ public class TestUtils extends ExtentSparkReport{
         ExtentSparkReport.initialise();
         postgresDatabaseUtilityInstance = PostgresDatabaseUtility.getInstance();
         postgresDatabaseUtilityInstance.setUpPostgresDBConnection();
-
     }
 
     @BeforeTest(alwaysRun = true)

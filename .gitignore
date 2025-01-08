@@ -36,3 +36,5 @@ build/
 
 ### Mac OS ###
 .DS_Store
+src/test/java/com/glassTests/launch.java
+.idea/inspectionProfiles/Project_Default.xml
