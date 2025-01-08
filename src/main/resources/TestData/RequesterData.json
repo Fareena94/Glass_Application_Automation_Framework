@@ -6,16 +6,16 @@
       "validPwd": "password123"
     }
   ],
-  "validCRed_Internal": [
+  "validCred_Internal": [
     {
       "validUserName":"ansh.admin",
-      "validPwd": "Athika@2024"
+      "validPwd": "password123"
     }
   ],
-  "validCRed_External": [
+  "validCred_External": [
     {
       "validUserName":"ansh.admin",
-      "validPwd": "Athika@2024"
+      "validPwd": "password123"
     }
   ],
   "newWorkRequestData": [
@@ -23,8 +23,17 @@
       "lowPriority": "Low",
       "highPriority": "High",
       "mediumPriority": "Medium",
+      "fileFormat_Txt": "txt",
       "requestedDeliveryDate": "11/11/2025",
-      "file": "C:\\Users\\fareena.s.wissen\\glass\\Glass_Application_Automation_Framework\\src\\main\\resources\\TestData\\SampleFile.pdf"
+      "fileFormat_PDF": "PDF",
+      "file": "C:\\Users\\fareena.s.wissen\\glass\\Glass_Application_Automation_Framework\\src\\main\\resources\\TestData\\SampleFile.pdf",
+      "addFields": [
+        {
+          "lang_field": "Language",
+          "dept_field": "Department",
+          "lang_field_value": "English"
+        }
+      ]
     }
   ]
 }

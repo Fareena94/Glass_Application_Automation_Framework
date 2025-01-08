@@ -731,7 +731,17 @@ public class SeleniumUtilities {
             }
         }
     }
-    public void closeBrowser() {
-          driver.close();
+
+    public void clickOnShadowElement(String shadowHostSelector,String locator){
+        // Locate the shadow host
+        WebElement shadowHost = driver.findElement(By.cssSelector(shadowHostSelector));
+        // Get the shadow root
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement shadowRoot = (WebElement) js.executeScript("return arguments[0].shadowRoot", shadowHost);
+        // Locate the button within the
+        WebElement button = shadowRoot.findElement(By.cssSelector(locator));
     }
+    public void closeBrowser() {
+//          driver.close();
+   }
 }

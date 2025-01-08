@@ -1,0 +1,6 @@
+Sleep(1000)
+ControlFocus("Open","","Edit1")
+Sleep(1000)
+ControlSetText("Open","","Edit1","C:\Users\fareena.s.wissen\glass\Glass_Application_Automation_Framework\src\main\resources\TestData\SampleFile.pdf")
+Sleep(1000)
+ControlClick("Open","","Button1")
