@@ -82,12 +82,6 @@ public class ExtentSparkReport {
      * @param m
      * @param result
      */
-//    public void setMethod(Method m, Test result) {
-//        test = extent.createTest(getClass().getSimpleName() + " : " + m.getName() + "()");
-//        System.out.println(extent.createTest(getClass().getSimpleName()));
-//        System.out.println(test);
-//        extentLogger = test.createNode(result.description());
-//    }
 
     public void setMethod(Method m, Test result) {
         test = extent.createTest(getClass().getSimpleName() + " : " + m.getName() + "( )");

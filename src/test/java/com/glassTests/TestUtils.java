@@ -6,8 +6,9 @@ import com.glassPages.POM.Requestor1.CreateNewWorkReq;
 import com.glassPages.Utility.CommonUtility;
 import com.glassPages.Utility.ExtentSparkReport;
 import com.glassPages.Utility.JSONUtility;
-import com.glassTests.requester.HomePageTest;
+import com.glassPages.Utility.PostgresDatabaseUtility;
 import lombok.SneakyThrows;
+import org.apache.commons.lang.RandomStringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.ITestContext;
@@ -21,13 +22,16 @@ public class TestUtils extends ExtentSparkReport{
     public Logger logger = LogManager.getLogger(TestUtils.class);
     public static CommonUtility commonUtility;
     public static LoginPage loginPageInstance;
+    PostgresDatabaseUtility postgresDatabaseUtilityInstance;
 
-    public static HomePageTest homePageTestInstance;
+//    public static HomePageTest homePageTestInstance;
     public static CreateNewWorkReq createNewWRInstance;
 
     @BeforeSuite(alwaysRun = true)
     public void extents() {
         ExtentSparkReport.initialise();
+        postgresDatabaseUtilityInstance = PostgresDatabaseUtility.getInstance();
+        postgresDatabaseUtilityInstance.setUpPostgresDBConnection();
     }
 
     @BeforeTest(alwaysRun = true)
@@ -46,7 +50,7 @@ public class TestUtils extends ExtentSparkReport{
     @AfterMethod(alwaysRun = true)
     public void generateTestReport(ITestResult result) {
         ExtentSparkReport.generateReport(result);
-        loginPageInstance.closeCurrentBrowser();
+   //     loginPageInstance.closeCurrentBrowser();
     }
 
      public String getValueFromLoginDataJson(String regex) throws FileNotFoundException {
@@ -71,5 +75,16 @@ public class TestUtils extends ExtentSparkReport{
         initiateTheLogin_Test(getValueFromLoginDataJson("validCred_External[0].validUserName"),
                 getValueFromLoginDataJson("validCred_Internal[0].validPwd"));
     }
-
+    /**
+     * generateRandomString() - This method generates random String based on the length range provided.
+     *
+     * @param length
+     * @return
+     * @author - Vanshika Chauhan
+     * @version 1.0
+     */
+    public static String generateRandomString(int length) {
+        System.out.println(RandomStringUtils.randomAlphabetic(length));
+        return null;
+    }
 }

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="com.glassTests.requester.ListenerClass"> </listener>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="C:/Users/nitish.s.wissen/Glass-Application-Automation/Glass_Application_Automation_Framework/src/test/java/com/glassTests/requester">
+        <classes>
+<!--            <class name="com.glassTests.requester.CreateNewWorkReqTest">-->
+<!--            <methods><include name="createWorkRequest"/></methods>-->
+<!--            </class>-->
+
+            <class name="com.glassTests.requester.DemoTC1">
+            <methods><include name="testMethod"/></methods>
+            </class>
+
+            <class name="com.glassTests.requester.DemoTC2">
+                <methods><include name="testMethod"/></methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>
